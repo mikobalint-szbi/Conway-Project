@@ -1,0 +1,34 @@
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.exe
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.deps.json
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.runtimeconfig.json
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.dll
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.pdb
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.csproj.AssemblyReference.cache
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway_Project_New.Form1.resources
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.csproj.GenerateResource.cache
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.GeneratedMSBuildEditorConfig.editorconfig
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.AssemblyInfoInputs.cache
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.AssemblyInfo.cs
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.csproj.CoreCompileInputs.cache
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.dll
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\refint\Conway Project New.dll
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.pdb
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.genruntimeconfig.cache
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\ref\Conway Project New.dll
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.exe
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.deps.json
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.runtimeconfig.json
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.dll
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.pdb
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.csproj.AssemblyReference.cache
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway_Project_New.Form1.resources
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.csproj.GenerateResource.cache
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.GeneratedMSBuildEditorConfig.editorconfig
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.AssemblyInfoInputs.cache
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.AssemblyInfo.cs
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.csproj.CoreCompileInputs.cache
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.dll
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\refint\Conway Project New.dll
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.pdb
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.genruntimeconfig.cache
+H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\ref\Conway Project New.dll
