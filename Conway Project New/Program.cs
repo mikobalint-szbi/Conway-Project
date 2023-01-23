@@ -106,31 +106,37 @@ namespace Conway_Project_New
 
             int[,] field2 = new int[settings.field_height, settings.field_width];
 
-            if (!settings.infiniteField_mode) { 
+            if (!settings.infiniteField_mode)
+            {
 
-                for (int i = 1; i < settings.field_height-1; i++)
+                for (int i = 1; i < settings.field_height; i++)
                 {
-                    for (int j = 1; j < settings.field_width-1; j++)
+                    for (int j = 1; j < settings.field_width; j++)
                     {
 
                         switch (numOfNeighbours(i, j, field, settings))
                         {
                             case < 2:
-                                field2[i,j] = -1;    break;
+                                field2[i, j] = -1; break;
 
                             case 3:
-                                field2[i, j] += 1;   break;
+                                field2[i, j] += 1; break;
 
                             case > 3:
-                                field2[i, j] = -1;   break;
+                                field2[i, j] = -1; break;
 
                         }
                     }
                 }
             }
-            else 
+            else
             {
-
+                for (int i = 1; i < settings.field_height; i++)
+                {
+                    for (int j = 1; j < settings.field_width; j++)
+                    {
+                    }
+                }
             }
             return field2;
         }
