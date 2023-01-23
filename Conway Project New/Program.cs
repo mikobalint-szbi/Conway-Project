@@ -128,6 +128,10 @@ namespace Conway_Project_New
                     }
                 }
             }
+            else 
+            {
+
+            }
             return field2;
         }
 
