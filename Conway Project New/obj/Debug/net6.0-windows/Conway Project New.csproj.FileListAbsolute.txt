@@ -32,3 +32,20 @@ H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0
 H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.pdb
 H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.genruntimeconfig.cache
 H:\O\Local\Conway Project\Conway Project New\Conway Project New\obj\Debug\net6.0-windows\ref\Conway Project New.dll
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.exe
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.deps.json
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.runtimeconfig.json
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.dll
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.pdb
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.csproj.AssemblyReference.cache
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway_Project_New.Form1.resources
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.csproj.GenerateResource.cache
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.GeneratedMSBuildEditorConfig.editorconfig
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.AssemblyInfoInputs.cache
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.AssemblyInfo.cs
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.csproj.CoreCompileInputs.cache
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.dll
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\refint\Conway Project New.dll
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.pdb
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.genruntimeconfig.cache
+F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\ref\Conway Project New.dll
