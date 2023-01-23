@@ -30,26 +30,49 @@ namespace Conway_Project_New
         [STAThread]
 
 
-        static int numOfNeighbours(int i, int j, int[,] field)
+        static int numOfNeighbours(int i, int j, int[,] field, Settings settings)
         {
             int count = 0;
-
-            int[] move = { -1, 0, 1 };
-
-            foreach (int movI in move)
+            if (!settings.infiniteField_mode)
             {
-                foreach (int movJ in move)
+                int[] move = { -1, 0, 1 };
+                foreach (int movI in move)
                 {
-                    if (field[i + movI, j + movJ] != -1)
+                    foreach (int movJ in move)
                     {
-                        if (movI != 0 && movJ != 0)
-                            count++;
+                        if (field[i + movI, j + movJ] != -1)
+                        {
+                            if (movI != 0 && movJ != 0)
+                                count++;
+                        }
                     }
                 }
+                if (field[i, j] != -1)
+                    count--;
+
             }
 
-            if (field[i, j] != -1)
-                count--;
+            if (settings.infiniteField_mode)
+            {
+
+                int[] move = { -1, 0, 1 };
+                foreach (int movI in move)
+                {
+                    foreach (int movJ in move)
+                    {
+                        if (field[i + movI, j + movJ] != -1)
+                        {
+                            if (movI != 0 && movJ != 0)
+                                count++;
+                        }
+                    }
+                }
+                if (field[i, j] != -1)
+                    count--;
+
+            }
+
+            
 
 
             return count;
@@ -77,22 +100,25 @@ namespace Conway_Project_New
 
             int[,] field2 = new int[settings.field_height, settings.field_width];
 
-            for (int i = 1; i < settings.field_height-1; i++)
-            {
-                for (int j = 1; j < settings.field_width-1; j++)
+            if (!settings.infiniteField_mode) { 
+
+                for (int i = 1; i < settings.field_height-1; i++)
                 {
-
-                    switch (numOfNeighbours(i, j, field))
+                    for (int j = 1; j < settings.field_width-1; j++)
                     {
-                        case < 2:
-                            field2[i,j] = -1;    break;
 
-                        case 3:
-                            field2[i, j] += 1;   break;
+                        switch (numOfNeighbours(i, j, field, settings))
+                        {
+                            case < 2:
+                                field2[i,j] = -1;    break;
 
-                        case > 3:
-                            field2[i, j] = -1;   break;
+                            case 3:
+                                field2[i, j] += 1;   break;
 
+                            case > 3:
+                                field2[i, j] = -1;   break;
+
+                        }
                     }
                 }
             }
