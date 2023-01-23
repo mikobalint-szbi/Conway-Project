@@ -7,17 +7,23 @@ namespace Conway_Project_New
 
     }*/
 
-    struct Settings
+    public struct Settings
     {
         public int field_height;
         public int field_width;
+        public int window_height;
+        public int window_width;
+        
         public bool infiniteField_mode;
 
-        public Settings(int field_width, int field_height, bool infiniteField_mode)
+
+        public Settings(int field_width, int field_height, bool infiniteField_mode, int window_height, int window_width)
         {
             this.field_width = field_width;
             this.field_height = field_height;
             this.infiniteField_mode = infiniteField_mode;
+            this.window_height = window_height;
+            this.window_width = window_width;
         }
     }
 
@@ -138,7 +144,9 @@ namespace Conway_Project_New
             {
                 field_height = 256,
                 field_width = 256,
-                infiniteField_mode = false
+                infiniteField_mode = false,
+                window_height = 720,
+                window_width = 1280
             };
 
 
@@ -162,7 +170,7 @@ namespace Conway_Project_New
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form1(settings));
 
 
 

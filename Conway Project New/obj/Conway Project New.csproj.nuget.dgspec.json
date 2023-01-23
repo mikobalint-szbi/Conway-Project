@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\O\\Local\\Conway Project\\Conway Project New\\Conway Project New\\Conway Project New.csproj": {}
+    "F:\\Users\\felhasználó\\Asztal\\C#\\Conway-Project\\Conway Project New\\Conway Project New.csproj": {}
   },
   "projects": {
-    "H:\\O\\Local\\Conway Project\\Conway Project New\\Conway Project New\\Conway Project New.csproj": {
+    "F:\\Users\\felhasználó\\Asztal\\C#\\Conway-Project\\Conway Project New\\Conway Project New.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\O\\Local\\Conway Project\\Conway Project New\\Conway Project New\\Conway Project New.csproj",
+        "projectUniqueName": "F:\\Users\\felhasználó\\Asztal\\C#\\Conway-Project\\Conway Project New\\Conway Project New.csproj",
         "projectName": "Conway Project New",
-        "projectPath": "H:\\O\\Local\\Conway Project\\Conway Project New\\Conway Project New\\Conway Project New.csproj",
-        "packagesPath": "C:\\Users\\mikob\\.nuget\\packages\\",
-        "outputPath": "H:\\O\\Local\\Conway Project\\Conway Project New\\Conway Project New\\obj\\",
+        "projectPath": "F:\\Users\\felhasználó\\Asztal\\C#\\Conway-Project\\Conway Project New\\Conway Project New.csproj",
+        "packagesPath": "C:\\Users\\felhasználó\\.nuget\\packages\\",
+        "outputPath": "F:\\Users\\felhasználó\\Asztal\\C#\\Conway-Project\\Conway Project New\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mikob\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\felhasználó\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
