@@ -49,3 +49,20 @@ F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net
 F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.pdb
 F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.genruntimeconfig.cache
 F:\Users\felhasználó\Asztal\C#\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\ref\Conway Project New.dll
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.exe
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.deps.json
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.runtimeconfig.json
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.dll
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\bin\Debug\net6.0-windows\Conway Project New.pdb
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.csproj.AssemblyReference.cache
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway_Project_New.Form1.resources
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.csproj.GenerateResource.cache
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.AssemblyInfoInputs.cache
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.AssemblyInfo.cs
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.csproj.CoreCompileInputs.cache
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.dll
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\refint\Conway Project New.dll
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.pdb
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\Conway Project New.genruntimeconfig.cache
+C:\Users\mikobalint\Documents\GitHub\Conway-Project\Conway Project New\obj\Debug\net6.0-windows\ref\Conway Project New.dll

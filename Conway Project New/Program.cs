@@ -25,6 +25,15 @@ namespace Conway_Project_New
             this.window_height = window_height;
             this.window_width = window_width;
         }
+
+        public static Settings g = new Settings
+        {
+            field_height = 256,
+            field_width = 256,
+            infiniteField_mode = false,
+            window_height = 720,
+            window_width = 1280
+        };
     }
 
 
@@ -36,10 +45,12 @@ namespace Conway_Project_New
         [STAThread]
 
 
-        static int numOfNeighbours(int i, int j, int[,] field, Settings settings)
+
+
+        static int numOfNeighbours(int i, int j, int[,] field)
         {
             int count = 0;
-            if (!settings.infiniteField_mode)
+            if (!Settings.g.infiniteField_mode)
             {
                 int[] move = { -1, 0, 1 };
                 foreach (int movI in move)
@@ -58,7 +69,7 @@ namespace Conway_Project_New
 
             }
 
-            if (settings.infiniteField_mode)
+            if (Settings.g.infiniteField_mode)
             {
 
                 int[] move = { -1, 0, 1 };
@@ -85,36 +96,22 @@ namespace Conway_Project_New
 
         }
 
-        static int[,] new_Field(Settings settings)
-        {
-            int[,] field = new int[settings.field_height+2, settings.field_width+2];
-
-            for (int i = 0; i < settings.field_height; i++)
-            {
-                for (int j = 0; j < settings.field_width; j++)
-                {
-                    field[i, j] = -1;
-                }
-            }
-            return field;
-        }
 
 
-
-        static int[,] nextFrame(int[,] field, Settings settings)
+        static int[,] nextFrame(int[,] field)
         {
 
-            int[,] field2 = new int[settings.field_height, settings.field_width];
+            int[,] field2 = new_Field();
 
-            if (!settings.infiniteField_mode)
+            if (!Settings.g.infiniteField_mode)
             {
 
-                for (int i = 1; i < settings.field_height; i++)
+                for (int i = 1; i < Settings.g.field_height                  ; i++)
                 {
-                    for (int j = 1; j < settings.field_width; j++)
+                    for (int j = 1; j < Settings.g.field_width; j++)
                     {
 
-                        switch (numOfNeighbours(i, j, field, settings))
+                        switch (numOfNeighbours(i, j, field))
                         {
                             case < 2:
                                 field2[i, j] = -1; break;
@@ -131,15 +128,31 @@ namespace Conway_Project_New
             }
             else
             {
-                for (int i = 1; i < settings.field_height; i++)
+                for (int i = 1; i < Settings.g.field_height; i++)
                 {
-                    for (int j = 1; j < settings.field_width; j++)
+                    for (int j = 1; j < Settings.g.field_width; j++)
                     {
                     }
                 }
             }
             return field2;
         }
+
+
+        static int[,] new_Field()
+        {
+            int[,] field = new int[Settings.g.field_height + 2, Settings.g.field_width + 2];
+
+            for (int i = 0; i < Settings.g.field_height; i++)
+            {
+                for (int j = 0; j < Settings.g.field_width; j++)
+                {
+                    field[i, j] = -1;
+                }
+            }
+            return field;
+        }
+
 
         static void displayFrame()
         {
@@ -150,17 +163,11 @@ namespace Conway_Project_New
 
         static void Main()
         {
-            Settings settings = new Settings
-            {
-                field_height = 256,
-                field_width = 256,
-                infiniteField_mode = false,
-                window_height = 720,
-                window_width = 1280
-            };
+            
+            
 
 
-            int[,] field = new_Field(settings);
+            int[,] field = new_Field();
             
 
 
@@ -168,7 +175,7 @@ namespace Conway_Project_New
             for (int i = 0; i < 200; i++)
             {
 
-                field = nextFrame(field, settings);
+                field = nextFrame(field);
                 displayFrame();
 
 
@@ -180,7 +187,7 @@ namespace Conway_Project_New
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(settings));
+            Application.Run(new Form1());
 
 
 
