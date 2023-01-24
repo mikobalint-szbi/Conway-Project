@@ -1,0 +1,6 @@
+
+Üres sor a pálya szélén. 
+Ha infiniteFielf_mode true, akkot Átmásolja a pálya szélén lévő sejteket ebbe a szélső keretbe.
+
+FONTOS!
+A nextFrame függvény csak azokal a sejtekkel foglalkozik, csak azokat használhatja, amik nem a szélső keret-sorban tartózkodnak.
