@@ -32,31 +32,23 @@ namespace Conway_Project_New
 
         public int[] getFieldPosition(int window_width, int window_height)
         {
-            int[] ratio = getRatio(1080,1920);
+            int[] ratio = getRatio(16,9);
 
             int actual_width = ratio[0];
             int actual_height = ratio[1];
 
-            if (ratio[0] >= ratio[1])
-            {
-                while (actual_width < window_width - 10)
-                {
-                    actual_width += ratio[0];
-                }
-                actual_height = actual_width / ratio[0] * ratio[1];
-                
-            }
-            else
-            {
-                while (actual_height < window_height - 10)
-                {
-                    actual_height += ratio[0];
-                }
-                actual_width = actual_height / ratio[1] * ratio[0];
 
+            while (actual_width < window_width-40 && actual_height < window_height-60)
+            {
+                actual_width += ratio[0];
+                actual_height += ratio[1];
             }
 
-            int[] result = {actual_width, actual_height};
+            int position_x = (window_width - actual_width - 15) / 2;
+            int position_y = (window_height - actual_height - 40) / 2;
+
+
+            int[] result = {position_x, position_y, actual_width, actual_height};
 
             return result;
         }
@@ -86,7 +78,7 @@ namespace Conway_Project_New
 
             int height = this.Height;
 
-            g.DrawRectangle(pen, 10, 10, 100,100);
+            // g.DrawRectangle(pen, 10, 10, 100,100);
 
 
         }
@@ -96,9 +88,15 @@ namespace Conway_Project_New
             int width = Size.Width;
             int height = Size.Height;
 
-            int[] fieldLocation = getFieldPosition(Size.Width, Size.Height);
-            
+            int[] fieldPosition = getFieldPosition(Size.Width, Size.Height);
 
+            Graphics g = this.CreateGraphics();
+
+            Pen pen = new Pen(Color.Black);
+            Brush brush = new SolidBrush(Color.Black);
+
+            g.Clear(Color.FromArgb(240,240,240));
+            g.DrawRectangle(pen, fieldPosition[0], fieldPosition[1], fieldPosition[2], fieldPosition[3]);
 
         }
     }
