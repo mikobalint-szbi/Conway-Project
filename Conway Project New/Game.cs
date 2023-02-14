@@ -53,6 +53,135 @@ namespace Conway_Project_New
             return result;
         }
 
+        static int numOfNeighbours(int i, int j, int[,] field)
+        {
+            int count = 0;
+            if (!Settings.g.infiniteField_mode)
+            {
+                int[] move = { -1, 0, 1 };
+                foreach (int movI in move)
+                {
+                    foreach (int movJ in move)
+                    {
+                        if (field[i + movI, j + movJ] != -1)
+                        {
+                            if (movI != 0 && movJ != 0)
+                                count++;
+                        }
+                    }
+                }
+                if (field[i, j] != -1)
+                    count--;
+
+            }
+
+            if (Settings.g.infiniteField_mode)
+            {
+
+                int[] move = { -1, 0, 1 };
+                foreach (int movI in move)
+                {
+                    foreach (int movJ in move)
+                    {
+                        if (field[i + movI, j + movJ] != -1)
+                        {
+                            if (movI != 0 && movJ != 0)
+                                count++;
+                        }
+                    }
+                }
+                if (field[i, j] != -1)
+                    count--;
+
+            }
+
+
+
+
+            return count;
+
+        }
+
+
+
+        static int[,] nextFrame(int[,] field)
+        {
+
+            int[,] field2 = new_Field();
+
+            if (!Settings.g.infiniteField_mode)
+            {
+
+                for (int i = 1; i < Settings.g.field_height; i++)
+                {
+                    for (int j = 1; j < Settings.g.field_width; j++)
+                    {
+
+                        switch (numOfNeighbours(i, j, field))
+                        {
+                            case < 2:
+                                field2[i, j] = -1; break;
+
+                            case 3:
+                                field2[i, j] += 1; break;
+
+                            case > 3:
+                                field2[i, j] = -1; break;
+
+                        }
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 1; i < Settings.g.field_height; i++)
+                {
+                    for (int j = 1; j < Settings.g.field_width; j++)
+                    {
+                    }
+                }
+            }
+            return field2;
+        }
+
+
+        static int[,] new_Field()
+        {
+            int[,] field = new int[Settings.g.field_height + 2, Settings.g.field_width + 2];
+
+            for (int i = 0; i < Settings.g.field_height; i++)
+            {
+                for (int j = 0; j < Settings.g.field_width; j++)
+                {
+                    field[i, j] = -1;
+                }
+            }
+            return field;
+        }
+        
+        public void positionsTable()
+        {
+            // int[] = getFieldPosition()   <-- nem mûködik
+            // hiba: a getFieldPosition mindig elkéri a screen widthet és heightot
+            // ezt a settingsben kellene tárolni. Van is neki megfelelõ változó
+            // onResize függvény --> akárhányszor módosul az ablak mérete, frissíti a beállítások screensize változóit a megfelelõ értékre
+        }
+
+
+
+        public void displayField(int[,] field)
+        {
+
+            for (int x = 1; x < Settings.g.field_height+1; x++)
+            {
+                for (int y = 1; y < Settings.g.field_width+1; y++)
+                {
+
+                }
+            }
+        }
+
+
 
         public Form1()
         {
@@ -68,6 +197,15 @@ namespace Conway_Project_New
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            int[,] field = new_Field();
+
+            for (int i = 0; i < 200; i++)
+            {
+                field = nextFrame(field);
+                displayField(field);
+
+            }
 
         }
 
