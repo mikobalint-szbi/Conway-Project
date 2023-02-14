@@ -32,7 +32,7 @@ namespace Conway_Project_New
 
         public int[] getFieldPosition(int window_width, int window_height)
         {
-            int[] ratio = getRatio(16,9);
+            int[] ratio = getRatio(Settings.g.field_width, Settings.g.field_height);
 
             int actual_width = ratio[0];
             int actual_height = ratio[1];
