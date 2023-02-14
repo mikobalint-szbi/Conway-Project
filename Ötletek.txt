@@ -4,3 +4,8 @@ Ha infiniteFielf_mode true, akkot Átmásolja a pálya szélén lévő sejteket 
 
 FONTOS!
 A nextFrame függvény csak azokal a sejtekkel foglalkozik, csak azokat használhatja, amik nem a szélső keret-sorban tartózkodnak.
+
+
+Két függvény:
+   fieldDisplay()
+   fieldChange() --> Energiatakarékosság: nem törli le mindig és rajzolja teljesen újra a táblát, csak indításkor és átméretezéskor

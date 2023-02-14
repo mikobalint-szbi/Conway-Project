@@ -43,6 +43,7 @@
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(777, 464);
+            this.Location = new System.Drawing.Point(10, 10);
             this.Name = "Form1";
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.ResumeLayout(false);

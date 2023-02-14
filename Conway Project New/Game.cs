@@ -1,6 +1,7 @@
 using Conway_Project_New;
 using System.Diagnostics;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace Conway_Project_New
 {
@@ -9,49 +10,6 @@ namespace Conway_Project_New
 
     public partial class Form1 : Form
     {
-
-        public static int[] getRatio(int a, int b)
-        {
-            int a_original = a;
-            int b_original = b;
-
-            while (a != 0 && b != 0)
-            {
-                if (a > b)
-                    a %= b;
-                else
-                    b %= a;
-            }
-
-            int[] ratio = { a_original / (a | b), b_original / (a | b) };
-
-            return ratio;
-        }
-
-
-
-        public int[] getFieldPosition(int window_width, int window_height)
-        {
-            int[] ratio = getRatio(Settings.g.field_width, Settings.g.field_height);
-
-            int actual_width = ratio[0];
-            int actual_height = ratio[1];
-
-
-            while (actual_width < window_width-40 && actual_height < window_height-60)
-            {
-                actual_width += ratio[0];
-                actual_height += ratio[1];
-            }
-
-            int position_x = (window_width - actual_width - 15) / 2;
-            int position_y = (window_height - actual_height - 40) / 2;
-
-
-            int[] result = {position_x, position_y, actual_width, actual_height};
-
-            return result;
-        }
 
         static int numOfNeighbours(int i, int j, int[,] field)
         {
@@ -158,25 +116,111 @@ namespace Conway_Project_New
             }
             return field;
         }
-        
-        public void positionsTable()
+
+
+        public static int[] getRatio(int a, int b)
         {
-            // int[] = getFieldPosition()   <-- nem mûködik
-            // hiba: a getFieldPosition mindig elkéri a screen widthet és heightot
-            // ezt a settingsben kellene tárolni. Van is neki megfelelõ változó
-            // onResize függvény --> akárhányszor módosul az ablak mérete, frissíti a beállítások screensize változóit a megfelelõ értékre
+            int a_original = a;
+            int b_original = b;
+
+            while (a != 0 && b != 0)
+            {
+                if (a > b)
+                    a %= b;
+                else
+                    b %= a;
+            }
+
+            int[] ratio = { a_original / (a | b), b_original / (a | b) };
+
+            return ratio;
+        }
+
+
+
+        public int[] getFieldPosition()
+        {
+            int[] ratio = getRatio(Settings.g.field_width, Settings.g.field_height);
+
+            int actual_width = ratio[0];
+            int actual_height = ratio[1];
+
+            int window_width = Settings.g.window_width;
+            int window_height = Settings.g.window_height;
+
+
+            while (actual_width < window_width - 40 && actual_height < window_height - 60)
+            {
+                actual_width += ratio[0];
+                actual_height += ratio[1];
+            }
+
+            int position_x = (window_width - actual_width - 15) / 2;
+            int position_y = (window_height - actual_height - 40) / 2;
+
+
+            int[] result = { position_x, position_y, actual_width, actual_height };
+
+            return result;
+        }
+
+
+
+        public Tuple<int[], int[], int> get_cellPositions()
+        {
+            int[] fieldPosition = getFieldPosition();
+
+            int field_width = Settings.g.field_width;
+            int field_height = Settings.g.field_height;
+
+            int[] cellPositions_x = new int[field_width];
+            int[] cellPositions_y = new int[field_height];
+
+            int x = fieldPosition[0];
+            int y = fieldPosition[1];
+            int w = fieldPosition[2];
+            int h = fieldPosition[3];
+
+            int cellSize = w / field_width;
+
+            int currentCell_x = x;
+            int currentCell_y = y;
+
+            for (int i = 0; i < field_width; i++)
+            {
+                cellPositions_x[i] = currentCell_x;
+                currentCell_x += cellSize;
+            }
+
+            for (int i = 0; i < field_width; i++)
+            {
+                cellPositions_y[i] = currentCell_y;
+                currentCell_y += cellSize;
+            }
+
+            return Tuple.Create(cellPositions_x, cellPositions_y, cellSize);
+
         }
 
 
 
         public void displayField(int[,] field)
         {
+            Graphics g = this.CreateGraphics();
+            Pen pen = new Pen(Color.Black);
+            Brush brush = new SolidBrush(Color.DarkBlue);
+            Tuple<int[], int[], int> cellPositions = get_cellPositions();
 
-            for (int x = 1; x < Settings.g.field_height+1; x++)
+
+            g.Clear(Color.FromArgb(240, 240, 240));
+
+            g.DrawRectangle(pen, 10, 10, 50, 50);
+
+            for (int i = 0; i < Settings.g.field_width; i++)
             {
-                for (int y = 1; y < Settings.g.field_width+1; y++)
+                for (int j = 0; j < Settings.g.field_height; j++)
                 {
-
+                    g.DrawRectangle(pen, cellPositions.Item1[j], cellPositions.Item2[i], cellPositions.Item3, cellPositions.Item3);
                 }
             }
         }
@@ -190,23 +234,28 @@ namespace Conway_Project_New
             // MinimumSize = new Size(settings.window_width, settings.window_height);
 
 
-                
+            
 
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Graphics g = this.CreateGraphics();
+            Brush brush = new SolidBrush(Color.Black);
+            g.FillRectangle(brush, 10, 10, 50, 50);
+
+            Thread.Sleep(2000);
 
             int[,] field = new_Field();
 
-            for (int i = 0; i < 200; i++)
+            for (int i = 0; i < 400; i++)
             {
-                field = nextFrame(field);
                 displayField(field);
+                field = nextFrame(field);
 
+                Thread.Sleep(1000);
             }
-
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -214,28 +263,32 @@ namespace Conway_Project_New
             Graphics g = e.Graphics;
             Pen pen = new Pen(Color.Black);
 
-            int height = this.Height;
-
-            // g.DrawRectangle(pen, 10, 10, 100,100);
-
+            
 
         }
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            int width = Size.Width;
-            int height = Size.Height;
 
-            int[] fieldPosition = getFieldPosition(Size.Width, Size.Height);
+            Settings.g.window_width = Size.Width;
+            Settings.g.window_height = Size.Height;
+
+            int[] fieldPosition = getFieldPosition();
 
             Graphics g = this.CreateGraphics();
 
             Pen pen = new Pen(Color.Black);
-            Brush brush = new SolidBrush(Color.Black);
+            Brush brush = new SolidBrush(Color.DarkBlue);
 
-            g.Clear(Color.FromArgb(240,240,240));
-            g.DrawRectangle(pen, fieldPosition[0], fieldPosition[1], fieldPosition[2], fieldPosition[3]);
+            // g.FillRectangle(brush, fieldPosition[0], fieldPosition[1], fieldPosition[2], fieldPosition[3]);
+
+
+
+
+
+
 
         }
+
     }
 }
