@@ -45,6 +45,8 @@
             this.ClientSize = new System.Drawing.Size(777, 464);
             this.Location = new System.Drawing.Point(10, 10);
             this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint_1);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.ResumeLayout(false);
 

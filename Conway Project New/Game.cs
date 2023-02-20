@@ -192,8 +192,9 @@ namespace Conway_Project_New
                 currentCell_x += cellSize;
             }
 
-            for (int i = 0; i < field_width; i++)
+            for (int i = 0; i < field_height; i++)
             {
+                Debug.WriteLine($"{i} {cellPositions_y.Length}");
                 cellPositions_y[i] = currentCell_y;
                 currentCell_y += cellSize;
             }
@@ -214,11 +215,9 @@ namespace Conway_Project_New
 
             g.Clear(Color.FromArgb(240, 240, 240));
 
-            g.DrawRectangle(pen, 10, 10, 50, 50);
-
-            for (int i = 0; i < Settings.g.field_width; i++)
+            for (int i = 0; i < Settings.g.field_height; i++)
             {
-                for (int j = 0; j < Settings.g.field_height; j++)
+                for (int j = 0; j < Settings.g.field_width; j++)
                 {
                     g.DrawRectangle(pen, cellPositions.Item1[j], cellPositions.Item2[i], cellPositions.Item3, cellPositions.Item3);
                 }
@@ -234,38 +233,11 @@ namespace Conway_Project_New
             // MinimumSize = new Size(settings.window_width, settings.window_height);
 
 
-            
 
 
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            Graphics g = this.CreateGraphics();
-            Brush brush = new SolidBrush(Color.Black);
-            g.FillRectangle(brush, 10, 10, 50, 50);
-
-            Thread.Sleep(2000);
-
-            int[,] field = new_Field();
-
-            for (int i = 0; i < 400; i++)
-            {
-                displayField(field);
-                field = nextFrame(field);
-
-                Thread.Sleep(1000);
-            }
-        }
-
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            Pen pen = new Pen(Color.Black);
-
-            
 
         }
+
 
         private void Form1_Resize(object sender, EventArgs e)
         {
@@ -289,6 +261,26 @@ namespace Conway_Project_New
 
 
         }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+            int[,] field = new_Field();
+
+            for (int i = 0; i < 400; i++)
+            {
+                displayField(field);
+                field = nextFrame(field);
+                Thread.Sleep(1000);
+            }
+
+        }
+
 
     }
 }
