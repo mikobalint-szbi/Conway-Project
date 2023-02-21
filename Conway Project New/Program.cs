@@ -28,8 +28,8 @@ namespace Conway_Project_New
 
         public static Settings g = new Settings
         {
-            field_height = 90,
-            field_width = 160,
+            field_height = 45,
+            field_width = 80,
             infiniteField_mode = false,
             window_height = 720,
             window_width = 1280

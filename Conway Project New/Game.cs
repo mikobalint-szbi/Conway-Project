@@ -2,6 +2,7 @@ using Conway_Project_New;
 using System.Diagnostics;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Timers;
 
 namespace Conway_Project_New
 {
@@ -10,6 +11,24 @@ namespace Conway_Project_New
 
     public partial class Form1 : Form
     {
+
+        private static System.Timers.Timer aTimer;
+
+        private static void SetTimer()
+        {
+            // Create a timer with a two second interval.
+            aTimer = new System.Timers.Timer(9000);
+            // Hook up the Elapsed event for the timer. 
+            aTimer.Elapsed += OnTimedEvent;
+            aTimer.AutoReset = true;
+            aTimer.Enabled = true;
+        }
+        private static void OnTimedEvent(Object source, ElapsedEventArgs e)
+        {
+            Debug.WriteLine("The Elapsed event was raised at {0:HH:mm:ss.fff}",
+                              e.SignalTime);
+        }
+
 
         static int numOfNeighbours(int i, int j, int[,] field)
         {
@@ -267,8 +286,11 @@ namespace Conway_Project_New
 
         }
 
+        public static bool paused = false;
+
         private void Form1_Paint_1(object sender, PaintEventArgs e)
         {
+
 
             int[,] field = new_Field();
 
@@ -276,11 +298,20 @@ namespace Conway_Project_New
             {
                 displayField(field);
                 field = nextFrame(field);
+
                 Thread.Sleep(1000);
+
+
             }
+
+            aTimer.Dispose();
 
         }
 
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            paused = true;
+        }
 
     }
 }

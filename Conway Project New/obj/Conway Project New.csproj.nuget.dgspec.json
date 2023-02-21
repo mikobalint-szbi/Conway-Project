@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Users\\felhasználó\\Asztal\\C#\\Conway-Project\\Conway Project New\\Conway Project New.csproj": {}
+    "C:\\Users\\mikobalint\\Documents\\GitHub\\Conway-Project\\Conway Project New\\Conway Project New.csproj": {}
   },
   "projects": {
-    "F:\\Users\\felhasználó\\Asztal\\C#\\Conway-Project\\Conway Project New\\Conway Project New.csproj": {
+    "C:\\Users\\mikobalint\\Documents\\GitHub\\Conway-Project\\Conway Project New\\Conway Project New.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Users\\felhasználó\\Asztal\\C#\\Conway-Project\\Conway Project New\\Conway Project New.csproj",
+        "projectUniqueName": "C:\\Users\\mikobalint\\Documents\\GitHub\\Conway-Project\\Conway Project New\\Conway Project New.csproj",
         "projectName": "Conway Project New",
-        "projectPath": "F:\\Users\\felhasználó\\Asztal\\C#\\Conway-Project\\Conway Project New\\Conway Project New.csproj",
-        "packagesPath": "C:\\Users\\felhasználó\\.nuget\\packages\\",
-        "outputPath": "F:\\Users\\felhasználó\\Asztal\\C#\\Conway-Project\\Conway Project New\\obj\\",
+        "projectPath": "C:\\Users\\mikobalint\\Documents\\GitHub\\Conway-Project\\Conway Project New\\Conway Project New.csproj",
+        "packagesPath": "C:\\Users\\mikobalint\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mikobalint\\Documents\\GitHub\\Conway-Project\\Conway Project New\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\felhasználó\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mikobalint\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -58,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
